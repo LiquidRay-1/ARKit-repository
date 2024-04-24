@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,10 +20,20 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nP-b1-VRF">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAN-EY-9if">
+                                <rect key="frame" x="158" y="763" width="77" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Dibuja!"/>
+                                <connections>
+                                    <action selector="dibujar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d0k-O6-U0w"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="eAN-EY-9if" firstAttribute="top" secondItem="4nP-b1-VRF" secondAttribute="bottom" constant="-55" id="HmA-Wf-izU"/>
+                            <constraint firstItem="eAN-EY-9if" firstAttribute="centerX" secondItem="4nP-b1-VRF" secondAttribute="centerX" id="XGI-Rw-ehO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4nP-b1-VRF" secondAttribute="trailing" id="Y4t-4o-dXY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4nP-b1-VRF" secondAttribute="bottom" id="efw-N8-T6Y"/>
                             <constraint firstItem="4nP-b1-VRF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="geh-qj-Ous"/>

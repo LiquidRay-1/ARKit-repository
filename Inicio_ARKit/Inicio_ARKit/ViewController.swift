@@ -20,5 +20,12 @@ class ViewController: UIViewController {
         self.sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin, ARSCNDebugOptions.showFeaturePoints]
         self.sceneView.session.run(configuration)
     }
+    
+    @IBAction func dibujar(_ sender: Any) {
+        let node = SCNNode()
+        node.position = SCNVector3(0, 0, -1)
+        self.sceneView.scene.rootNode.addChildNode(node)
+    }
+    
 }
 
