@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         // Configurar opciones y ejecutar el sceneView
         self.sceneView.debugOptions = [ARSCNDebugOptions.showWorldOrigin, ARSCNDebugOptions.showFeaturePoints]
         self.sceneView.session.run(configuration)
+        
+        self.sceneView.autoenablesDefaultLighting = true
     }
     
     @IBAction func dibujar(_ sender: Any) {
