@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     
     @IBAction func dibujar(_ sender: Any) {
         let node = SCNNode()
+        node.geometry = SCNBox(width: 0.3, height: 0.05, length: 0.3, chamferRadius: 0.3)
         node.position = SCNVector3(0, 0, -1)
         self.sceneView.scene.rootNode.addChildNode(node)
     }
